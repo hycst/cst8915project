@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-admin
+  namespace: bestbuy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: store-admin
+  template:
+    metadata:
+      labels:
+        app: store-admin
+    spec:
+      containers:
+        - name: store-admin
+          image: hycst/bestbuy-store-admin:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+          env:
+            - name: PRODUCT_SERVICE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bestbuy-config
+                  key: PRODUCT_SERVICE_URL
+            - name: ORDER_SERVICE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bestbuy-config
+                  key: ORDER_SERVICE_URL
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: store-admin
+  namespace: bestbuy
+spec:
+  type: NodePort
+  selector:
+    app: store-admin
+  ports:
+    - port: 80
+      targetPort: 8081
+      nodePort: 30081
