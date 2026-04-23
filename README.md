@@ -146,7 +146,10 @@ Includes:
 
 ### Demo Video
 
-- YouTube Link: https://youtu.be/G3dyMmBEn3k
+- YouTube Link:
+- Part 1: 
+- Part 2: https://youtu.be/G3dyMmBEn3k
+- Part 3: https://youtu.be/sPw2IxbvgIc
 
 ### CI/CD Demo Summary
 
