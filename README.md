@@ -114,17 +114,17 @@ jobs:
           push: true
           tags: hycst/bestbuy-store-admin:latest
 #### Links Table
-Service	GitHub Repository	Docker Hub Image
-Store Front	https://github.com/hy7work/bestbuy-store-front
-	hycst/bestbuy-store-front:latest
-Store Admin	https://github.com/hy7work/bestbuy-store-admin
-	hycst/bestbuy-store-admin:latest
-Product Service	https://github.com/hy7work/bestbuy-product-service
-	hycst/bestbuy-product-service:latest
-Order Service	https://github.com/hy7work/bestbuy-order-service
-	hycst/bestbuy-order-service:latest
-Makeline Service	https://github.com/hy7work/bestbuy-makeline-service
-	hycst/bestbuy-makeline-service:latest
+
+## 🔗 Links Table
+
+| Service            | GitHub Repository                                      | Docker Hub Image                          |
+|-------------------|--------------------------------------------------------|-------------------------------------------|
+| Store Front       | https://github.com/hy7work/bestbuy-store-front         | hycst/bestbuy-store-front:latest          |
+| Store Admin       | https://github.com/hy7work/bestbuy-store-admin         | hycst/bestbuy-store-admin:latest          |
+| Product Service   | https://github.com/hy7work/bestbuy-product-service     | hycst/bestbuy-product-service:latest      |
+| Order Service     | https://github.com/hy7work/bestbuy-order-service       | hycst/bestbuy-order-service:latest        |
+| Makeline Service  | https://github.com/hy7work/bestbuy-makeline-service    | hycst/bestbuy-makeline-service:latest     |
+
 
 ### Deployment Files
 
