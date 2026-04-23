@@ -83,10 +83,8 @@ kubectl apply -f DeploymentFiles/
 #####  Verify Deployment
 kubectl get pods -n bestbuy
 kubectl get services -n bestbuy
-##### Access Applications
--   Store Front	http://localhost:30080
--   Store Admin	http://localhost:30081
-   ###  I/CD Pipeline
+
+   ###  CI/CD Pipeline
 
 Each microservice includes a GitHub Actions pipeline that:
 
