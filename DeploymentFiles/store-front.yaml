@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-front
+  namespace: bestbuy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: store-front
+  template:
+    metadata:
+      labels:
+        app: store-front
+    spec:
+      containers:
+        - name: store-front
+          image: hycst/bestbuy-store-front:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PRODUCT_SERVICE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bestbuy-config
+                  key: PRODUCT_SERVICE_URL
+            - name: ORDER_SERVICE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bestbuy-config
+                  key: ORDER_SERVICE_URL
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: store-front
+  namespace: bestbuy
+spec:
+  type: NodePort
+  selector:
+    app: store-front
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30080
