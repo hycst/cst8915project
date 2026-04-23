@@ -146,8 +146,7 @@ Includes:
 
 - YouTube Link:
 - Part 1: 
-- Part 2: https://youtu.be/G3dyMmBEn3k
-- Part 3: https://youtu.be/sPw2IxbvgIc
+- Part 2 (App demo), Part 3(CI/CD): https://youtu.be/WqgobTRl1N0
 
 ### CI/CD Demo Summary
 
