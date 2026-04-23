@@ -145,8 +145,7 @@ Includes:
 ### Demo Video
 
 - YouTube Link:
-- Part 1: 
-- Part 2 (App demo), Part 3(CI/CD): https://youtu.be/WqgobTRl1N0
+- https://youtu.be/5tK66P88cCk
 
 ### CI/CD Demo Summary
 
