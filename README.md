@@ -15,7 +15,9 @@ This project is a cloud-native microservices application developed for Best Buy.
 The system consists of 5 microservices and a database, deployed in a Kubernetes environment.
 
 ###  Architecture Diagram
-
+<p align="center">
+  <img src="./project-architecture.png" width="900">
+</p>
 
 ###  Application Architecture
 ####   Frontend Services
