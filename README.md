@@ -66,35 +66,35 @@ This still fully demonstrates:
 The same Kubernetes manifests can be deployed to AKS with minimal changes when Azure resources are available.
 
 ### Deployment Instructions
-Prerequisites
-Docker Desktop
-Kubernetes enabled (Docker Desktop / Minikube)
-kubectl installed
-Git
-1️ Clone Repositories
-git clone https://github.com/hy7work/bestbuy-store-front
-git clone https://github.com/hy7work/bestbuy-store-admin
-git clone https://github.com/hy7work/bestbuy-product-service
-git clone https://github.com/hy7work/bestbuy-order-service
-git clone https://github.com/hy7work/bestbuy-makeline-service
-2️⃣ Deploy Kubernetes Resources
+#### Prerequisites
+-  Docker Desktop
+- Kubernetes enabled (Docker Desktop / Minikube)
+-  kubectl installed
+-  Git
+
+##### Clone Repositories
+-  git clone https://github.com/hy7work/bestbuy-store-front
+-  git clone https://github.com/hy7work/bestbuy-store-admin
+-  git clone https://github.com/hy7work/bestbuy-product-service
+-  git clone https://github.com/hy7work/bestbuy-order-service
+-  git clone https://github.com/hy7work/bestbuy-makeline-service
+   ##### Deploy Kubernetes Resources
 kubectl apply -f DeploymentFiles/
-3️⃣ Verify Deployment
+#####  Verify Deployment
 kubectl get pods -n bestbuy
 kubectl get services -n bestbuy
-4️⃣ Access Applications
-Service	URL
-Store Front	http://localhost:30080
-
-Store Admin	http://localhost:30081
-🔄 CI/CD Pipeline
+##### Access Applications
+-   Store Front	http://localhost:30080
+-   Store Admin	http://localhost:30081
+   ###  I/CD Pipeline
 
 Each microservice includes a GitHub Actions pipeline that:
 
-Triggers on code push
-Builds Docker image
-Pushes image to Docker Hub
-(Manual step) Deploys updated image to Kubernetes
+-  Triggers on code push
+-  Builds Docker image
+-  Pushes image to Docker Hub
+-   (Manual step) Deploys updated image to Kubernetes
+
 Example Workflow
 on: push
 
@@ -113,7 +113,7 @@ jobs:
         with:
           push: true
           tags: hycst/bestbuy-store-admin:latest
-🔗 Links Table
+#### Links Table
 Service	GitHub Repository	Docker Hub Image
 Store Front	https://github.com/hy7work/bestbuy-store-front
 	hycst/bestbuy-store-front:latest
@@ -125,7 +125,8 @@ Order Service	https://github.com/hy7work/bestbuy-order-service
 	hycst/bestbuy-order-service:latest
 Makeline Service	https://github.com/hy7work/bestbuy-makeline-service
 	hycst/bestbuy-makeline-service:latest
-📁 Deployment Files
+
+### Deployment Files
 
 All Kubernetes manifests are located in:
 
@@ -133,15 +134,15 @@ DeploymentFiles/
 
 Includes:
 
-namespace.yaml
-store-front-deployment.yaml
-store-admin-deployment.yaml
-product-service.yaml
-order-service.yaml
-makeline-service.yaml
-mongodb-statefulset.yaml
-services.yaml
-ingress.yaml
+-  namespace.yaml
+-  store-front-deployment.yaml
+-  store-admin-deployment.yaml
+-  product-service.yaml
+-  order-service.yaml
+-  makeline-service.yaml
+-  mongodb-statefulset.yaml
+-  services.yaml
+-  ingress.yaml
 
 ### Demo Video
 
