@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bestbuy-config
+  namespace: bestbuy
+data:
+  PRODUCT_SERVICE_URL: "http://product-service:3002"
+  ORDER_SERVICE_URL: "http://order-service:3000"
+  ORDER_DB_URI: "mongodb://mongodb:27017"
+  ORDER_DB_NAME: "ordersdb"
+  ORDER_DB_COLLECTION_NAME: "orders"
+  RABBITMQ_HOST: "rabbitmq"
+  RABBITMQ_PORT: "5672"
+  ORDER_QUEUE_HOSTNAME: "rabbitmq"
+  
+  #PRODUCT_SERVICE_URL: "http://product-service:3002"
+  #ORDER_SERVICE_URL: "http://order-service:3000"
+  #ORDER_DB_URI: "mongodb://mongodb:27017"
+  #ORDER_DB_NAME: "ordersdb"
+  #ORDER_DB_COLLECTION_NAME: "orders"
+
+  #RABBITMQ_HOST: "rabbitmq"
+  #RABBITMQ_PORT: "5672"
+
+  #ORDER_QUEUE_NAME: "orders"
+  #ORDER_QUEUE_URI: "amqp://guest:guest@rabbitmq:5672/"
+  
+  ORDER_QUEUE_HOST: "rabbitmq"
+  ORDER_QUEUE_PORT: "5672"
+  ORDER_QUEUE_NAME: "orders"
+  ORDER_QUEUE_URI: "amqp://guest:guest@rabbitmq:5672/"
