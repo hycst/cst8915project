@@ -50,9 +50,9 @@ CI/CD pipelines using GitHub Actions
 Automatic Docker image build and push
 Scalable and modular design
 
- ### Deployment Note (IMPORTANT)
+ ### Deployment Note
 
-The original plan was to deploy this application to Azure Kubernetes Service (AKS). However, due to Azure subscription quota limitations, a Kubernetes cluster could not be provisioned.
+My original plan was to deploy this application to Azure Kubernetes Service (AKS). However, due to the Azure subscription quota limitations, a Kubernetes cluster could not be provisioned.  I had to raise a helpdesk ticket for the problem.
 
 - As a result, the application is deployed to a local Kubernetes cluster.
 
@@ -115,7 +115,7 @@ jobs:
           tags: hycst/bestbuy-store-admin:latest
 #### Links Table
 
-## 🔗 Links Table
+##  Links Table
 
 | Service            | GitHub Repository                                      | Docker Hub Image                          |
 |-------------------|--------------------------------------------------------|-------------------------------------------|
@@ -146,7 +146,7 @@ Includes:
 
 ### Demo Video
 
-- YouTube Link:
+- YouTube Link: https://youtu.be/G3dyMmBEn3k
 
 ### CI/CD Demo Summary
 
